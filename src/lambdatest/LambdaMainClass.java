@@ -2,7 +2,7 @@ package lambdatest;
 
 import java.util.function.BiPredicate;
 
-public class Lambda {
+public class LambdaMainClass {
 
     public static void main(String[] args) {
        
