@@ -14,27 +14,18 @@ public class LambdaMainClass {
                 return s2;
             }
         };
-        System.out.println(i1.betterString("sherif", "mamdouh"));
-
+        System.out.println(i1.betterString("sherif", "ahmed mamdouh"));
+        
+        
         //Second way
-        BiPredicate<String, String> i2 = (s3, s4) -> {
-            if (s3.length() > s4.length()) {
-                return true;
-            } 
-            else {
-                return false;
-            }
-        };
-        System.out.println(i2.test("bigger", "small"));
+        String str1 = "small";
+        String str2 = "the bigger";
+        String longer_test = StringTest.betterString(str1,str2,(s1,s2)->s1.length()>s2.length());
+        String first_test = StringTest.betterString(str1, str2, (s1, s2) -> true);
         
-        
-        
-        //Third way 
-        
-        StringTest test1 = new StringTest();
-        String str1 = "first";
-        String str2 = "second";
-        System.out.println(test1.betterString(str1, str2,(string1,string2)->str1.length()>str2.length()));
+        System.out.printf(longer_test+"\n");
+        System.out.printf(first_test+"\n");
+
     }
 
 }
